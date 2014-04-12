@@ -109,11 +109,7 @@ module Sinatra
     end
 
     def db_dir
-      if ActiveRecord::Tasks::DatabaseTasks.db_dir.is_a?(ActiveRecord::Tasks::DatabaseTasks::Rails)
-        ActiveRecord::Tasks::DatabaseTasks.db_dir = 'db'
-      else
-        ActiveRecord::Tasks::DatabaseTasks.db_dir ||= 'db'
-      end
+      ActiveRecord::Tasks::DatabaseTasks.db_dir = 'db'
     end
 
     def db_dir=(dir)
