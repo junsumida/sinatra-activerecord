@@ -109,6 +109,7 @@ module Sinatra
     end
 
     def db_dir
+      p ActiveRecord::Tasks::DatabaseTasks.db_dir.class
       ActiveRecord::Tasks::DatabaseTasks.db_dir ||= 'db'
     end
 
